@@ -47,8 +47,20 @@ public class TestLogic {
                 continue;
             }
 
+            boolean hasNumber =passAnalysis.hasNumber();
+            if(!hasNumber){
+                System.out.println("your pass does not have any digits. Please, repeat your input");
+                continue;
+            }
 
-            passwordValid = lengthEqualityIndicator && equalityIndicator && lengthIndicator && hasUpperCase;
+            boolean isAlphanumeric= passAnalysis.isCombinationOfLettersAndDigits();
+            if(!isAlphanumeric){
+                System.out.println("your pass is not alphanumeric (i.e not a combination of letters and digits). Please, repeat your input");
+                continue;
+            }
+
+
+            passwordValid = lengthEqualityIndicator && equalityIndicator && lengthIndicator && hasUpperCase && hasLowerCase && hasNumber && isAlphanumeric;
             System.out.println("your password have been successfully set");
 
         }

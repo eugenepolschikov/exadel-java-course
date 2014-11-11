@@ -1,5 +1,7 @@
 package org.exadel.java.course.epolschikov;
 
+import org.apache.commons.lang.StringUtils;
+
 import java.util.Scanner;
 
 /**
@@ -51,6 +53,14 @@ public class UserLoginMethods {
 
     public boolean hasLowerCase() {
         return !pass1.equals(pass1.toUpperCase());
+    }
+
+    public boolean hasNumber(){
+        return pass1.matches(".*\\d+.*");
+    }
+
+    public boolean isCombinationOfLettersAndDigits(){
+        return (StringUtils.isAlphanumeric(pass1) && pass1.matches("[A-Za-z0-9]+"));
     }
 
     private String pass1;
