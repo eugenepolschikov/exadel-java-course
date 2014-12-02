@@ -70,4 +70,19 @@ public class ExpressionSplitter {
     }
 
 
+    public void formProperListsAndPrint(){
+        
+    }
+    public void listsPrint(){
+        for(int count =0; count < nums.size(); count++){
+            System.out.println(nums.get(count));
+        }
+
+        for(int count =0; count < ops.size(); count++){
+            System.out.println(ops.get(count));
+        }
+    }
+
+
+
 }

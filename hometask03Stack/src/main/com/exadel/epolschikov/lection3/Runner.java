@@ -1,6 +1,7 @@
 package main.com.exadel.epolschikov.lection3;
 
 
+import main.com.exadel.epolschikov.lection3.logic.ExpressionSplitter;
 import main.com.exadel.epolschikov.lection3.logic.InputData;
 
 /**
@@ -22,7 +23,10 @@ public class Runner {
 //        evaluate expression
         InputData dataForCalculation= new InputData();
         dataForCalculation.inputExpressionToEvaluate();
-        dataForCalculation.splitInputIntoNumbersAndOperations();
+        String expToEvaluate=dataForCalculation.getExpression();
+        ExpressionSplitter splitExpIntoStack= new ExpressionSplitter(expToEvaluate);
+
+
 
 
     }
