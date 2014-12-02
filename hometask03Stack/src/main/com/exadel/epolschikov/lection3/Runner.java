@@ -3,6 +3,7 @@ package main.com.exadel.epolschikov.lection3;
 
 import main.com.exadel.epolschikov.lection3.logic.ExpressionSplitter;
 import main.com.exadel.epolschikov.lection3.logic.InputData;
+import main.com.exadel.epolschikov.lection3.stack.StackBuilder;
 
 /**
  * Runner class-
@@ -24,7 +25,11 @@ public class Runner {
         InputData dataForCalculation= new InputData();
         dataForCalculation.inputExpressionToEvaluate();
         String expToEvaluate=dataForCalculation.getExpression();
-        ExpressionSplitter splitExpIntoStack= new ExpressionSplitter(expToEvaluate);
+        ExpressionSplitter splitExpIntoLists= new ExpressionSplitter(expToEvaluate);
+        splitExpIntoLists.splitInputIntoNumbersAndOperations();
+        splitExpIntoLists.formProperListsFromExpression();
+
+        StackBuilder stackEval = new StackBuilder(splitExpIntoLists.getNums(),splitExpIntoLists.getOps());
 
 
 
