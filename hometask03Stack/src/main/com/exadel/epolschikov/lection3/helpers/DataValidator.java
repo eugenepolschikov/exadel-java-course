@@ -8,7 +8,11 @@ public class DataValidator {
 //    public final static String NUMERIC_REGEXP = "[0-9]{1,13}(\\.[0-9]*)?";
 //    public final static String NUMERIC_REGEXP="[-+]?[0-9]*\\.?[0-9]+";
     public final static String NUMERIC_REGEXP="[\\s0-9]+(\\.[0-9]*)?[\\s]*";
-    public final static String OPERATION_REGEXP = "[\\sA-Za-z\\^\\+\\*\\-/\\(\\)]+"; //[\s]*
+    public final static String OPERATION_REGEXP = "[\\sA-Za-z\\^\\+\\*\\-/\\(\\)]+[\\s]*";
+
+//    this will be used to analyzed input like LOG, LN , etc...
+    public final static String ALPHABETIC_REGEXP="[A-Za-z]+";
+
 
 
     public static boolean isNumericParsingAnalysis(String str) {

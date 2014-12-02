@@ -15,14 +15,8 @@ public class InputData {
     private String left;
     private String right;
     private String operation;
-
     private String expression;
 
-    private String[] splitExpression;
-
-    public String[] getSplitExpression() {
-        return splitExpression;
-    }
 
 
     public void numbersAndOperationInput() {
@@ -76,33 +70,12 @@ public class InputData {
         this.expression = in.nextLine();
         in.close();
 
-
     }
 
-
-    public void splitInputIntoNumbersAndOperations() {
-
-
-
-        String[] operations = this.expression.split(DataValidator.NUMERIC_REGEXP);
-        String[] notOperations = this.expression.split(DataValidator.OPERATION_REGEXP);
-
-        arrayObtainedPrint(operations,"array with operations print" );
-        arrayObtainedPrint(notOperations,"array with numbers print" );
-        /*
-        String[] res = new String[operations.length + notOperations.length -1 ];
-        for (int i = 0; i < res.length; i++) res[i] = i % 2 == 0 ? notOperations[i / 2] : operations[i / 2 + 1];
-
-        return res;*/
-
+    public String getExpression() {
+        return expression;
     }
 
-    public void arrayObtainedPrint(String[] arr,String message ){
-        System.out.println(message);
-        for(int count=0; count<arr.length; count++){
-            System.out.println(arr[count]);
-        }
-    }
 
 
 }
