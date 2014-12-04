@@ -5,6 +5,7 @@ import main.com.exadel.epolschikov.lection3.math.BinaryOperation;
 
 /**
  * Created by ypolshchykau on 27.11.2014.
+ * this ones evaluates two numbers and operation
  */
 public class Calculator {
     private double answer;
